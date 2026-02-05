@@ -1,0 +1,144 @@
+MEMORY ALLOCATION VISUALIZER – TEST CASES
+========================================
+
+----------------------------------------
+TEST CASE 1: INITIAL MEMORY STATE
+----------------------------------------
+Objective:
+Verify memory initialization.
+
+Steps:
+1. Run the program.
+
+Expected Output:
+- Total Memory: 1024 KB
+- OS Memory: 256 KB
+- User Memory: 768 KB
+- One free hole of 768 KB
+
+Result:
+PASS
+
+
+----------------------------------------
+TEST CASE 2: FIRST FIT ALLOCATION
+----------------------------------------
+Objective:
+Verify First Fit allocation behavior.
+
+Steps:
+1. Select option 1 (First Fit).
+2. Enter process size: 200 KB.
+
+Expected Output:
+- Process P1 allocated at address 256
+- Remaining free memory: 568 KB
+
+Result:
+PASS
+
+
+----------------------------------------
+TEST CASE 3: BEST FIT ALLOCATION
+----------------------------------------
+Objective:
+Verify Best Fit allocation behavior.
+
+Steps:
+1. Select option 2 (Best Fit).
+2. Enter process size: 300 KB.
+
+Expected Output:
+- Process allocated in the smallest suitable hole
+- Memory state updated correctly
+
+Result:
+PASS
+
+
+----------------------------------------
+TEST CASE 4: DEALLOCATION AND HOLE MERGING
+----------------------------------------
+Objective:
+Verify deallocation and hole merging.
+
+Steps:
+1. Allocate two processes.
+2. Deallocate the first process.
+
+Expected Output:
+- Process removed from memory
+- Adjacent holes merged if possible
+
+Result:
+PASS
+
+
+----------------------------------------
+TEST CASE 5: WORST FIT ALLOCATION
+----------------------------------------
+Objective:
+Verify Worst Fit allocation behavior.
+
+Steps:
+1. Create multiple holes via deallocation.
+2. Allocate a process using Worst Fit.
+
+Expected Output:
+- Process allocated in the largest available hole
+
+Result:
+PASS
+
+
+----------------------------------------
+TEST CASE 6: FRAGMENTATION ANALYSIS
+----------------------------------------
+Objective:
+Verify fragmentation calculation.
+
+Steps:
+1. Create multiple holes.
+2. Select option 6 (Fragmentation Analysis).
+
+Expected Output:
+- Correct fragmentation percentage displayed
+- Free memory and hole count correct
+
+Result:
+PASS
+
+
+----------------------------------------
+TEST CASE 7: ALLOCATION FAILURE
+----------------------------------------
+Objective:
+Verify behavior when insufficient memory exists.
+
+Steps:
+1. Fill memory.
+2. Attempt allocation larger than available free memory.
+
+Expected Output:
+- Allocation failure message displayed
+
+Result:
+PASS
+
+
+----------------------------------------
+TEST CASE 8: ALGORITHM COMPARISON MODE
+----------------------------------------
+Objective:
+Verify algorithm comparison functionality.
+
+Steps:
+1. Select option 7 (Compare All Algorithms).
+
+Expected Output:
+- Memory reset for each algorithm
+- Same input used for all algorithms
+- Comparison summary displayed
+
+Result:
+PASS
